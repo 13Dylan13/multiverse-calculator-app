@@ -17,3 +17,7 @@ def index(start_number, operation_number):
         result = result * start_number
         i += 1
     return result
+
+def add_then_multiply(start_number, operation_number):
+    result = (start_number + operation_number)*operation_number
+    return result

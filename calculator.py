@@ -1,5 +1,5 @@
 import sys
-from calc import add, subtract, multiply, divide, index
+from calc import add, subtract, multiply, divide, index, add_then_multiply
 
 def conversions(operation,start_number,operation_number):
     operation = operation.lower()
@@ -19,6 +19,8 @@ def calculation(operation,start_number,operation_number):
         result = divide(start_number, operation_number)
     elif operation == "index":
         result = index(start_number, operation_number)
+    elif operation == "add_then_multiply":
+        result = add_then_multiply(start_number, operation_number)
     else:
         raise Exception(f"Unsupported or invalid operation '{operation}'")
     print('Answer: ', result)
@@ -38,7 +40,7 @@ def main():
     print ("Sum: ", start_number, operation.upper(), operation_number)
     conversions(operation,start_number,operation_number)
 
-availableoperation = ['Add', 'Subtract', 'Multiply', 'Divide', 'Index']
+availableoperation = ['Add', 'Subtract', 'Multiply', 'Divide', 'Index','Add_then_multiply']
 
 if __name__ == '__main__':
     sys.exit(main())
